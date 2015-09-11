@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by michaelbrennan on 9/10/15.
+ * Created by Michael Brennan on 9/10/15.
  */
 public class BuzzModel implements Serializable {
 

@@ -3,6 +3,7 @@ package com.mike
 import com.mike.model.BuzzModel
 import com.mike.model.IntersectionModel
 import com.mike.service.BuzzService
+import com.mike.service.FactorialService
 import com.mike.service.IntersectionService
 import com.mike.service.ReverseService
 import com.mike.util.Constants
@@ -22,6 +23,8 @@ class TestCases extends Specification{
     IntersectionService intersectionService
     @Shared
     IntersectionModel intersectionModel
+    @Shared
+    FactorialService factorialService
 
     def "testBuzz"(){
         when:
@@ -45,7 +48,7 @@ class TestCases extends Specification{
         ReverseService reverseService = new ReverseService()
 
         then:
-        reverseService.reverse("god").getReversedWord() == "dog"
+        reverseService.reverse("god").getReversedWord() == "dog"  //able to compare objects correctly in groovy using double equals
         reverseService.reverse("sizzler").getReversedWord() == "relzzis"
         reverseService.reverse("I am a human being").getReversedWord() == "gnieb namuh a ma I"
         reverseService.reverse("i").getReversedWord() == "i"
@@ -109,5 +112,32 @@ class TestCases extends Specification{
         intersectionModel.getIntersectionData().isEmpty()
         intersectionModel1.getIntersectionData().isEmpty()
         intersectionModel2.getIntersectionData().isEmpty()
+    }
+
+    def "factorial 1"(){
+        when:
+        factorialService = new FactorialService()
+        def zero = factorialService.factorial(0).getFactorial()
+        def one = factorialService.factorial(1).getFactorial()
+
+        then:
+        zero == 0
+        one == 1
+    }
+
+    def "factorial 2"(){
+        when:
+        factorialService = new FactorialService()
+        def six = factorialService.factorial(3).getFactorial()
+        then:
+        six == 6
+    }
+
+    def "factorial 3"(){
+        when:
+        factorialService = new FactorialService()
+        def factof10  = factorialService.factorial(10).getFactorial()
+        then:
+        factof10 == 3628800
     }
 }

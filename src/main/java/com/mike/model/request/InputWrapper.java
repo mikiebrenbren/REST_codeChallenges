@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by michaelbrennan on 9/11/15.
+ * Created by Michael Brennan on 9/11/15.
  */
 public class InputWrapper implements Serializable {
 
