@@ -32,7 +32,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     // end::actuator[]
 }
-
-//bootRepackage {
-//    mainClass = 'com.mike.Application'
-//}
+springBoot {
+    mainClass = 'com.mike.Application'
+}
