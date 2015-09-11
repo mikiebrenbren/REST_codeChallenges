@@ -14,8 +14,11 @@ NOTE: Valid answers will be returned in JSON as well as logged to the console as
 Below are some valid curls and responses for a local deployment of this application
 
 *** BUZZ ***
+
 cURL:
+
 curl -X GET 'http://localhost:8080/buzz'
+
 Expected Response:
 {"buzz":["1","2","3","4","5","6","buzz","8","9","10","buzz","12","13","buzz","15","16","17","18","19","20","buzz","buzz",
 "23","24","25","26","27","buzz","29","30","31","32","buzz","34","buzz","36","37","38","39","40","41","buzz","43","buzz","45",
@@ -24,19 +27,30 @@ Expected Response:
 "92","93","94","95","96","97","buzz","buzz","100"]}
 
 *** Reversal ***
+
 cURL:
+
 curl -X GET 'http://localhost:8080/reverse/hello'
+
 Expected Response:
+
 {"reversedWord":"olleh"}
 
 *** Intersection ***
+
 cURL:
+
 curl -X POST -H "Content-Type: application/json" -d '{"arr1":[[1,2,3],[1,2,3,4]]}' 'http://localhost:8080/intersection'
+
 Expected Response:
+
 {"intersectionData":[1,2,3]}
 
 *** Factorial ***
+
 cURL:
 curl -X GET 'http://localhost:8080/factorial/10'
+
 Expected Response:
+
 {"factorial":3628800}
