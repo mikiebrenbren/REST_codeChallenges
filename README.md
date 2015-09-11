@@ -15,9 +15,9 @@ Below are some valid curls and responses for a local deployment of this applicat
 
 *** BUZZ ***
 
-cURL:
+URL: http://localhost:8080/buzz
 
-curl -X GET 'http://localhost:8080/buzz'
+cURL: curl -X GET 'http://localhost:8080/buzz'
 
 Expected Response:
 {"buzz":["1","2","3","4","5","6","buzz","8","9","10","buzz","12","13","buzz","15","16","17","18","19","20","buzz","buzz",
@@ -28,29 +28,27 @@ Expected Response:
 
 *** Reversal ***
 
-cURL:
+URL: http://localhost:8080/reverse/{word to reverse}
 
-curl -X GET 'http://localhost:8080/reverse/hello'
+cURL: curl -X GET 'http://localhost:8080/reverse/hello'
 
 Expected Response:
-
 {"reversedWord":"olleh"}
 
 *** Intersection ***
 
-cURL:
+URL: http://localhost:8080/intersection NOTE: must attached JSON array of arrays entity.  This JSON array must contain the two lists to be compared
 
-curl -X POST -H "Content-Type: application/json" -d '{"arr1":[[1,2,3],[1,2,3,4]]}' 'http://localhost:8080/intersection'
+cURL: curl -X POST -H "Content-Type: application/json" -d '{"arr1":[[1,2,3],[1,2,3,4]]}' 'http://localhost:8080/intersection'
 
 Expected Response:
-
 {"intersectionData":[1,2,3]}
 
 *** Factorial ***
 
-cURL:
-curl -X GET 'http://localhost:8080/factorial/10'
+URL: http://localhost:8080/factorial/{number to be factorialed}
+
+cURL: curl -X GET 'http://localhost:8080/factorial/10'
 
 Expected Response:
-
 {"factorial":3628800}
