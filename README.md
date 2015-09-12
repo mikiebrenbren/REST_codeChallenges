@@ -9,6 +9,7 @@ In order to run this locally using via the executable 'fat jar', do a 'gradle cl
 NOTE: Valid answers will be returned in JSON as well as logged to the console(if ran locally) as per specified in the description of the challenges
 
 *** BUZZ ***
+
 HTTP Method: GET
 URL Local: http://localhost:8080/buzz
 URL AWS Deployed Instance: http://default-environment-dpgy4gsvzc.elasticbeanstalk.com/buzz
@@ -23,7 +24,8 @@ Expected Response:
 "69","buzz","71","72","73","74","75","76","buzz","78","79","80","81","82","83","buzz","85","86","87","buzz","89","90","buzz",
 "92","93","94","95","96","97","buzz","buzz","100"]}
 
-*** Reversal ***
+*** REVERSAL ***
+
 HTTP Method: GET
 URL Local: http://localhost:8080/reverse/{word to reverse}
 URL AWS Deployed Instance: http://default-environment-dpgy4gsvzc.elasticbeanstalk.com/reverse/{word to reverse}
@@ -34,7 +36,8 @@ cUrl AWS: curl -X GET 'http://default-environment-dpgy4gsvzc.elasticbeanstalk.co
 Expected Response:
 {"reversedWord":"olleh"}
 
-*** Intersection ***
+*** INTERSECTION ***
+
 HTTP Method: POST
 URL Local: http://localhost:8080/intersection NOTE: must attached JSON array of arrays entity.  This JSON array must contain the two lists to be compared
 URL AWS Deployed Instance: http://default-environment-dpgy4gsvzc.elasticbeanstalk.com/intersection NOTE: must attached JSON array of arrays entity.  This JSON array must contain the two lists to be compared
@@ -45,7 +48,8 @@ cURL AWS: curl -X POST -H "Content-Type: application/json" -d '{"arr1":[[1,2,3],
 Expected Response:
 {"intersectionData":[1,2,3]}
 
-*** Factorial ***
+*** FACTORIAL ***
+
 HTTP Method: GET
 URL Local: http://localhost:8080/factorial/{number to be factorialed}
 URL AWS Deployed Instance: http://localhost:8080/factorial/{number to be factorialed}
