@@ -71,3 +71,6 @@ NOTE: Valid answers will be returned in JSON as well as logged to the console(if
 
 *Expected Response:*
 {"factorial":3628800}
+
+
+*NOTE: There is an importable postman collection at the root level as well*
