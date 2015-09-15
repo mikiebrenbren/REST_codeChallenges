@@ -2,7 +2,7 @@
 
 Tests cases can be found in the test folder in the TestCases class.  The tests are done in groovy and spock framework.
 
-In order to run this locally using via the executable 'fat jar', execute the command 'gradle clean build' at the project level on the command line, then
+In order to run this locally via the executable 'fat jar', execute the command 'gradle clean build' at the project level on the command line, then
  execute the command 'java -jar build/libs/codeChallenge-1.0.0.jar', this will automatically deploy a local tomcat instance of the application
 
 ### **Below are some valid curls and responses for a local and AWS deployments of this application**
